@@ -8,7 +8,7 @@
 
 ## Website
 
-* [Version1](http://scott-mcnab.github.io/Weather-App)
-* [Version2](http://scott-mcnab.github.io/Weather-App/Oblique Strategies/index.html)
-* [Version3](http://scott-mcnab.github.io/Weather-App/prototype.html)
-* [Final](http://scott-mcnab.github.io/Weather-App/prototype.html)
+* [Version1](http://scott-mcnab.github.io/Narrative-Storytelling/version1.html)
+* [Version2](http://scott-mcnab.github.io/Narrative-Storytelling/version2.html)
+* [Version3](http://scott-mcnab.github.io/Narrative-Storytelling/version3.html)
+* [Final](http://scott-mcnab.github.io/Narrative-Storytelling/index.html)
