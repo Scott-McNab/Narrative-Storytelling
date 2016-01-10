@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title>Dot Navigation</title>
+ <link rel="stylesheet" href="navstyle.css"/>
+ <link href='https://fonts.googleapis.com/css?family=BenchNine:400,300,700' rel='stylesheet' type='text/css'>
+ <script>
+     
+     	$(document).ready(function($){
+          var parPosition = [];
+        $('.par').each(function() {
+            parPosition.push($(this).offset().top);
+        });
+        
+		$('a').click(function(){
+			$('html, body').animate({
+				scrollTop: $( $.attr(this, 'href') ).offset().top
+			}, 500);
+			return false;
+		});
+        
+        	$('.vNav ul li a').click(function () {
+			$('.vNav ul li a').removeClass('active');
+				$(this).addClass('active');
+		}); 
+        
+       $('.vNav a').hover(function() {
+           $(this).find('.label').show();
+           }, function() {
+           $(this).find('.label').hide();
+       });
+        
+           $(document).scroll(function(){
+        var position = $(document).scrollTop(),
+                index; 
+                for (var i=0; i<parPosition.length; i++) {
+                if (position <= parPosition[i]) {
+                    index = i;
+                    break;
+                }
+            }
+      $('.vNav ul li a').removeClass('active');
+            $('.vNav ul li a:eq('+index+')').addClass('active');
+        });
+        
+        	$('.vNav ul li a').click(function () {
+			$('.vNav ul li a').removeClass('active');
+				$(this).addClass('active');
+		});   
+	});
+
+     
+ </script>
+</head>
+    
+<body>
+
+    <nav>
+       <ul>
+            <li>
+                <a href="#section01">
+                    <div class="label">Section01</div>
+                </a>
+            </li>
+            <li>
+                <a href="#section02">
+                    <div class="label">Section02</div>
+                </a>
+            </li>
+            <li>
+                <a href="#section03">
+                    <div class="label">Section03</div>
+                </a>
+            </li>
+            <li>
+                <a href="#section04">
+                    <div class="label">Section04</div>
+                </a>
+            </li>
+     </ul>
+    </nav>
+    
+    <div id="section01" class="par">
+    <h1>Section 01</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis, lacus gravida pharetra posuere, neque ligula malesuada mi, ac accumsan turpis neque sit amet libero. Morbi a hendrerit nibh, sed tristique turpis. Vivamus hendrerit tincidunt urna nec laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent faucibus quis diam et auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ornare dui at nulla eleifend pharetra. </p>
+</div>
+
+<div id="section02" class="par">
+    <h1>This is Section 02</h1>
+    <p>Etiam erat eros, aliquam nec gravida vel, consectetur quis elit. Mauris convallis viverra purus ac facilisis. Mauris non libero vitae purus molestie accumsan sed vel urna. Fusce in laoreet justo, blandit vestibulum odio. In bibendum nunc id eros vehicula tristique. Suspendisse nec neque facilisis, commodo leo ac, gravida tellus. Duis tincidunt lacus in pretium bibendum. Donec elementum velit vel faucibus ornare. Vestibulum velit arcu, bibendum non laoreet nec, scelerisque eget ligula. Praesent sed euismod massa. Nullam dictum dolor eu consequat condimentum.</p>
+</div>
+
+<div id="section03" class="par">
+    <h1>Section 03</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis, lacus gravida pharetra posuere, neque ligula malesuada mi, ac accumsan turpis neque sit amet libero. Morbi a hendrerit nibh, sed tristique turpis. Vivamus hendrerit tincidunt urna nec laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent faucibus quis diam et auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ornare dui at nulla eleifend pharetra. </p>
+</div>
+
+<div id="section04" class="par">
+    <h1>This is Section 04</h1>
+    <p>Etiam erat eros, aliquam nec gravida vel, consectetur quis elit. Mauris convallis viverra purus ac facilisis. Mauris non libero vitae purus molestie accumsan sed vel urna. Fusce in laoreet justo, blandit vestibulum odio. In bibendum nunc id eros vehicula tristique. Suspendisse nec neque facilisis, commodo leo ac, gravida tellus. Duis tincidunt lacus in pretium bibendum. Donec elementum velit vel faucibus ornare. Vestibulum velit arcu, bibendum non laoreet nec, scelerisque eget ligula. Praesent sed euismod massa. Nullam dictum dolor eu consequat condimentum.</p>
+</div>
+
+</body>
+</html>

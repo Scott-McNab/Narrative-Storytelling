@@ -1,0 +1,19 @@
+body{
+margin: 0;
+padding: 0;
+width: 100vw;
+color: black;
+font-family: 'BenchNine', sans-serif;
+}
+
+#map4{
+    width: 100%;
+    height: 100vh;
+}
+
+#map{
+    width: 100%;
+    height: 100vh;
+    z-index: -99;
+    position: relative;
+}
