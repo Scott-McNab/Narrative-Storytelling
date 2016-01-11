@@ -2,7 +2,7 @@
 
 ## Style Tile
 
-(http://scott-mcnab.github.io/Narrative-Storytelling/styletile.svg "Style Tile")
+![](http://scott-mcnab.github.io/Narrative-Storytelling/styletile.svg "Style Tile")
 
 ## Prototypes
 
